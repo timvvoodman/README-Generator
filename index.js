@@ -1,19 +1,59 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const markdown = require("./utils/generateMarkdown");
+const markdown = require("./utils/generateMarkdown.js");
 
 // array of questions for user
 const questions = [
   {
     type: "input",
-    message: "What is the title of your project?",
-    name: "title",
+    message: "What is your GitHub username?",
+    name: "username",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("A valid GitHub username is required.");
+      }
+      return true;
+    },
   },
+
   {
     type: "input",
-    message: "Write a breif description of your project:",
-    name: "description",
+    message:
+      "What is your prefered email for questions regarding this project?",
+    name: "email",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("Email is required. Please try agian.");
+      }
+      return true;
+    },
   },
+
+  {
+    type: "input",
+    message: "What is the title of your project?",
+    name: "title",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("A valid project title is required.");
+      }
+      return true;
+    },
+  },
+
+  {
+    type: "input",
+    message: "Write a description of your project:",
+    name: "description",
+    default: "Project Description",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("A valid project description is required.");
+      }
+      return true;
+    },
+  },
+
   {
     type: "input",
     message: "Provide installation instructions for your project:",
@@ -29,17 +69,40 @@ const questions = [
     message: "Provide guidelines for project contrbution:",
     name: "contribute",
   },
+
+  {
+    type: "list",
+    message: "Choose a license for your this project.",
+    choices: [
+      "GNU AGPLv3",
+      "GNU GPLv3",
+      "GNU LGPLv3",
+      "Mozilla Public License 2.0",
+      "Apache License 2.0",
+      "MIT License",
+      "Boost Software License 1.0",
+      "The Unlicense",
+    ],
+    name: "license",
+  },
 ];
 
 // function to write README file
-//function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log("Your README.md file has been created successfully");
+  });
+}
 
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then((response) => {
-    fs.writeFile("log.txt", JSON.stringify(response), {}, (e) =>
-      console.log(e)
-    );
+    const markdown = generateMarkdown(response);
+    writeToFile("testREADME", markdown);
   });
 }
 

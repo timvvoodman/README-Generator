@@ -1,1 +1,0 @@
-{"title":"Read me generator","description":"command line that creates a readme file","installation":"none required","usage":"use durring or at the end of dvelopment to assist in making a good readme","contribute":"this is a free for all"}

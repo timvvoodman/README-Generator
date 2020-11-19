@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const markdown = require("./utils/generateMarkdown.js");
+const { generateMarkdown } = require("./utils/generateMarkdown.js");
 
 // array of questions for user
 const questions = [
@@ -45,7 +45,6 @@ const questions = [
     type: "input",
     message: "Write a description of your project:",
     name: "description",
-    default: "Project Description",
     validate: function (answer) {
       if (answer.length < 1) {
         return console.log("A valid project description is required.");
@@ -68,6 +67,12 @@ const questions = [
     type: "input",
     message: "Provide guidelines for project contrbution:",
     name: "contribute",
+  },
+
+  {
+    type: "input",
+    message: "Provide info on how to test to see if your project works:",
+    name: "test",
   },
 
   {
@@ -100,8 +105,8 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-  inquirer.prompt(questions).then((response) => {
-    const markdown = generateMarkdown(response);
+  inquirer.prompt(questions).then((data) => {
+    const markdown = generateMarkdown(data);
     writeToFile("testREADME", markdown);
   });
 }

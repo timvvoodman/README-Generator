@@ -1,7 +1,7 @@
-# test title
+# Test Title
 ![License: MIT License]
 ## Description
-this is the description import
+Test description
 ## Table of Contents
 [Description](#Description)  
 * [Installation](#Installation)  
@@ -13,13 +13,13 @@ this is the description import
 ## Instalation
 undefined 
 ## Usage
-this is the instructions and use import 
+Test instructions and useage 
 # Contributing
 undefined
 ## Test
-this is the test import
+Test test info
 ## Questions
-Please direct all questions regarding this project to bob@builder.com, Thank You!
+Please direct all questions regarding this project to timothyrwoodman@gmail.com, Thank You!
 ## License 
 This application is covered under a MIT License license.
 [timvvoodman](https://github.com/undefined)

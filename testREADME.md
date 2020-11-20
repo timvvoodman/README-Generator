@@ -1,7 +1,7 @@
-# Test Title
+# Title goes here
 ![License: MIT License]
 ## Description
-Test description
+Description goes here'
 ## Table of Contents
 [Description](#Description)  
 * [Installation](#Installation)  
@@ -13,11 +13,11 @@ Test description
 ## Instalation
 undefined 
 ## Usage
-Test instructions and useage 
+usage information goes here 
 # Contributing
 undefined
 ## Test
-Test test info
+info on how to test goes here
 ## Questions
 Please direct all questions regarding this project to timothyrwoodman@gmail.com, Thank You!
 ## License 

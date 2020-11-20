@@ -23,13 +23,13 @@ This app requires inquirer npm. Run `npm install inquirer` in the terminal
 
 ## Usage
 
-_please see the embeded video after the step by step instructions._
+_See the embeded video after the step by step instructions._
 
 1. In the terminal, run `node index.js`
 2. Answer the prompts
 3. the testREADME.md file will generate in the current working directory
 
-[![README-Generator Demo](doc/screenshot_youtube.PNG)](https://www.youtube.com/watch?v=PvroKrj2KuQ "Click to watch on YouTube")
+[![README-Generator Demo](./Assets/workingApp.png)](https://www.youtube.com/watch?v=PvroKrj2KuQ "Click to watch on YouTube")
 
 # Contributing
 
@@ -38,7 +38,7 @@ Contributions are Welcome
 1. Fork the repository
 2. Create a descriptive branch name
 3. Commit and push your code
-4. Create a pull request
+4. Create a pull request.
    _Please email me if I do not respond to your pull request_
 
 ## Questions

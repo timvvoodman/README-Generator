@@ -1,7 +1,7 @@
-# Title goes here
-![License: MIT License]
+# Sample Title
+![License: MIT License](https://img.shields.io/badge/License-MIT License-blue)
 ## Description
-Description goes here'
+description goes here
 ## Table of Contents
 [Description](#Description)  
 * [Installation](#Installation)  
@@ -13,11 +13,11 @@ Description goes here'
 ## Instalation
 undefined 
 ## Usage
-usage information goes here 
+usage examples and instructions go here 
 # Contributing
 undefined
 ## Test
-info on how to test goes here
+how to test your project goes here
 ## Questions
 Please direct all questions regarding this project to timothyrwoodman@gmail.com, Thank You!
 ## License 
